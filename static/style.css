@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman",Times, sans-serif;
+
+    background-color: #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    font-size: 32px; /* cỡ chữ của Welcome... */
+    margin: 40px 0 20px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* căn giữa của các section */
+    margin: 40px auto; /* khoảng cách so với tiêu đề header */
+    width: 60%; /* 60% Giảm độ rộng để tạo sự cân đối */
+}
+
+.content-hidden {
+    display: none;
+    margin-top: 10px;
+}
+
+.content-visible {
+    display: block;
+}
+/* Hiệu ứng fade-in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+.section:hover {
+    background-color: #f0f0f0; /*làm hiệu ứng ẩn hiện trạng thái của section*/
+}
+
+.section {
+    width: 900px; /*điều chỉnh độ dài của khung chữ nhật*/
+    padding: 20px; /*chỉnh độ rộng dọc*/
+    margin: 10px auto; /* khoảng cách các mục nội dung*/
+    background-color: white;
+    border: 1px solid #ddd; /*tạo khung chữ nhật với border-radius*/
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.plus {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    margin: 40px auto;
+    font-size: 20px;
+    color: black;
+
+}
+/* của General Information */
+.general-info {
+    display: flex;
+    align-items: center; /* căn ảnh giữa theo chiều dọc */
+}
+
+.avatar {
+    width: 300px; /* điều chỉnh kt ảnh */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 10px; /* khoảng cách từ viền ngoài của đối tượng (ảnh, text, div,...) đến các đối tượng xung quanh hoặc viền của khung chứa (container). */
+    transform: translate(95px, 5px); /* Di chuyển theo trục x và y */
+}
+
+.info-text {
+    margin-left: 30px; /* Đẩy toàn bộ khối thông tin sang phải */
+    margin-top: 5px;  /* Đẩy xuống dưới */
+    position: relative; /* Để sử dụng top và left */
+    top: 10px; /* Đẩy xuống theo trục y */
+    left: 80px; /* Đẩy sang phải theo trục x */
+    /*font-family: Calibri, sans-serif;*/
+
+}
+
+.info-text p {
+    margin: 20px 0; /* Khoảng cách giữa các dòng */
+    font-size: 22px;
+    font-weight: normal;
+    color: dimgray; /*chữ xám*/
+}
+.spacing {
+    margin-left: 35px; /* Điều chỉnh khoảng cách theo ý muốn */
+}
+.spacing1 {
+    margin-left: 45px; /* Điều chỉnh khoảng cách theo ý muốn */
+}
+.spacing2 {
+    margin-left: 16px; /* Điều chỉnh khoảng cách theo ý muốn */
+}
+.spacing3 {
+    margin-left: 32px; /* Điều chỉnh khoảng cách theo ý muốn */
+}
+
+/* của Education */
+.education {
+    display: flex; /*đưa vào cùng 1 dòng */
+    gap: 10px; /* khoảng cách giữa ảnh 3 cái ảnh*/
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.avatar1{
+    width: 70px; /* thu nhỏ ảnh để chừa chỗ cho thông tin */
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0px 10px; /* khoảng cách từ viền ngoài của đối tượng (ảnh, text, div,...) đến các đối tượng xung quanh hoặc viền của khung chứa (container). */
+    margin-bottom: 20px;
+    transform: translate(0px, -15px);
+}
+.infor-educa{
+    font-size: 22px;
+    font-weight: normal;
+    color: dimgray; /*chữ xám*/
+    transform: translate(0px, -20px);
+    margin-bottom: -40px; /* chỗ này chỉnh kc lề dưới từ Faculty of  mecha */
+    line-height: 22px;
+}
+.spaceebetween{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/* Của Experience */
+.experience {
+    color: dimgray;
+    font-size: 22px;
+    display: flex;
+    align-items: center; /* Canh giữa theo chiều dọc */
+    margin-top: 15px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column; /* Xếp text theo cột */
+    margin-left: 10px; /* Khoảng cách giữa logo và text */
+    width: 100%; /* Chiếm hết chiều rộng còn lại */
+}
+
+.textFWD {
+    display: flex;
+    justify-content: space-between; /* Đẩy hai bên */
+    width: 100%; /* Đảm bảo full chiều rộng */
+    margin-top: -10px;/* phải chỉnh khoảng cách 2 dòng text chỗ này*/
+}
+.textFWDD {
+    display: flex;
+    justify-content: space-between; /* Đẩy hai bên */
+    width: 100%; /* Đảm bảo full chiều rộng */
+    margin-top: 20px;
+    margin-bottom: -5px; /* phải chỉnh khoảng cách 2 dòng text chỗ này*/
+}
+.avatar2 {
+    width: 80px;
+    height: 90px;
+    border-radius: 8px;
+}
+.experience1{
+    display: flex;
+    justify-content: space-between;
+}
+.avatar3{
+    width: 475px;
+    height: auto;
+    border-radius: 8px;
+    justify-items: right;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+.mission{
+    margin: 10px 0; /* Khoảng cách giữa các dòng */
+    font-size: 22px;
+    font-weight: normal;
+    color: dimgray; /*chữ xám*/
+    margin-left:-20px;
+    margin-top: -15px;
+}
+.mission li{
+    line-height: 2;
+}
+.skillgain{
+    line-height: 2;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: -10px;
+    margin-bottom: -15px;
+}
+.experience2{
+    color: dimgray;
+    font-size: 22px;
+    font-weight: normal;
+}
+.experience2 li{
+    line-height: 2;
+    margin-left: 35px;
+}
+.video{
+    width: 650px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.video-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.avatar4{
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+.experience3{
+    color: dimgray;
+    font-size: 22px;
+    display: flex;
+    align-items: center; /* Canh giữa theo chiều dọc */
+    margin-top: 30px;
+}
+.avatar5{
+    width: 475px;
+    height: auto;
+    border-radius: 8px;
+    justify-items: right;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+/* Của SKILL */
+.skill{
+    font-size: 22px;
+    font-weight: normal;
+    color: dimgray; /*chữ xám*/
+}
+.skill ul{
+    line-height: 2;
+    margin-bottom: -10px;
+}
+.skill p{
+    margin-bottom: -10px;
+    font-size: 20px;
+}
+.skill li{
+    margin-left: -15px;
+}
+.spacing4{
+    margin-left: 150px;
+}
+/* Của RELEVANT */
+.toeic{
+    width: 800px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}

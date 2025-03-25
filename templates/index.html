@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <!-- Liên kết CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Tiêu đề chính -->
+    <div class="header">
+        WELCOME TO MY PERSONAL WEBSITE
+    </div>
+
+    <!-- Các mục thông tin cá nhân -->
+    <div class="content">
+
+        <div class="section" onclick="toggleContent('general-info',this)">
+    	 GENERAL INFORMATION <span class="plus">+</span>
+    	<div id="general-info" class="content-hidden">
+    	<div class="general-info">
+
+        <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Avatar" class="avatar">
+        <div class="info-text">
+            <p>Name:<span class="spacing">Nguyen The Nguyen</span></p>
+            <p>Age: <span class="spacing1">25</span></p>
+            <p>Address:<span class="spacing2">Da Nang, Viet Nam</span></p>
+            <p>Email:<span class="spacing">the.nguyen213.2000@gmail.com</span></p>
+        <p>Phone:<span class="spacing3">+84&nbsp;355917200</span></p>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="section" onclick="toggleContent('education',this)">
+        EDUCATION <span class="plus">+</span>
+        
+        <div id="education" class="content-hidden">
+            <div class="education">
+        <img src="{{ url_for('static', filename='images/logoDUT.jpg') }}" alt="logoDUT" class="avatar1">
+        <img src="{{ url_for('static', filename='images/logoCKDUT.jpg') }}" alt="logo-CK-DUT" class="avatar1">
+        <img src="{{ url_for('static', filename='images/logoFAST.jpg') }}" alt="logo-FAST" class="avatar1">
+        </div>
+        <div class="infor-educa">
+        <p style="text-align: center; margin-bottom: 35px;"><strong>The University of Da Nang, University of Science and Technology</strong></p>
+        <p class="spaceebetween">
+            <b><span>PFIEV Automation and Production Engineering</span></b>
+            <span><i> 2018 − September 2023</i></span>
+        </p>
+        <p><i>FAST Faculty of Advanced Science and Technology</i></p>
+        <p class="spaceebetween">
+            <b><span>Master's Degree in Mechatronics</span></b>
+            <span><i>March 2024 − Now</i></span>
+        </p>
+        <p><i>Faculty of Mechanical Engineering</i></p>
+        </div>
+        </div>
+        </div>
+
+        <div class="section" onclick="toggleContent('experience', this)">
+            EXPERIENCE <span class="plus">+</span>
+            <div id="experience" class="content-hidden">
+                <!--phần này FWD-->
+                <div class="experience">
+                    <img src="{{ url_for('static', filename='images/logo-FWD.png') }}" alt="logo-FWD" class="avatar2">
+                    <div class="text-wrapper">
+                        <div class="textFWD">
+                            <b>FWD Automation Robotics Tech</b>
+                            <b>Viet Nam</b>
+                        </div>
+                        <div class="textFWDD">
+                            <i style="font-weight: normal;">Internship</i>
+                            <span style="font-weight: normal;"><i>January 2023 − July 2023</i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience1">
+                    <div class="mission">
+                        <ul><li>Collected and compiled specifications of equipment and automatic machines.
+                        </li>
+                        <li>Participated in the production assembly &nbsp&nbsp and manufacturing.</li>
+                        </ul>
+                        <p class="skillgain"><strong>Skill Gain:</strong> SolidWorks, AutoCAD (design, analysis, and simulation), GX Works, QR code with C#, SQL, motor control (stepper, servo), electrical components...</p>
+                    </div>
+                    <div>
+                        <img src="{{ url_for('static', filename='images/FWD.jpg') }}" alt="FWD" class="avatar3"> 
+                    </div>
+                </div>
+                <div>
+                  <hr style="border: 1px solid #ccc; width: 60%;"> <!--tạo đường kẻ ngang chia bố cục-->
+                </div>
+                <!--này phần Project-->
+                <div class="experience2">
+                    <p><strong>PROJECT</strong></p>
+                    <p><b>Name:</b>&nbsp&nbsp LENS MOLD FILLING MACHINE (HOYA COMPANY)</p>
+                    <p><b>Role:</b>&nbsp&nbsp&nbsp&nbsp Co-Developer and assembler</p>
+                    <p><b>Contributions:</b></p>
+                    <ul>
+                        <li>Designed the tray feeding machine using SolidWorks and AutoCAD.</li>
+                        <li>Programmed the automation logic with GX Works.</li>
+                        <li>Implemented QR code scanning with C# and SQL</li>
+                    </ul>
+                    <p><b>Result:</b></p>
+                    <p><i>Achieved a cost-effective design, reducing costs by 15% while improving production efficiency.</i></p>
+                    <p><b>Video Demo</b></p>
+                    <div class="video-align">
+                    <video class="video" controls>
+                        <source src="{{ url_for('static', filename='videos/mophong.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>    
+                    </div> 
+                    <div><hr style="border: 1px solid gray; width: 100%;"> </div>     
+                </div>
+                <div class="experience3">
+                    <img src="{{ url_for('static', filename='images/namson.jpg') }}" alt="logo-FWD" class="avatar4">
+                    <div class="text-wrapper">
+                        <div class="textFWD">
+                            <b>Nam Son Brick Production Company</b>
+                            <b>Viet Nam</b>
+                        </div>
+                        <div class="textFWDD">
+                            <i style="font-weight: normal;">Internship</i>
+                            <span style="font-weight: normal;"><i>May 2022 – July 2022</i></span>
+                        </div>
+                    </div>
+                </div>
+                 <!--phần này nhà máy gạch-->
+                <div class="experience1">
+                    <div class="mission">
+                        <ul>
+                        <li>Enhanced the efficiency of raw material categorization.</li>
+                        <li>Participated in optimizing production efficiency through robotic automation.</li>
+                        </ul>
+                        <p class="skillgain"><strong>Skill Gain:</strong> </p>
+                        <p style="margin-left: 20px;">SolidWorks Design, Process Optimization.</p>
+                    </div>
+                    <div>
+                        <img src="{{ url_for('static', filename='images/nhamay.png') }}" alt="nhamaynamson" class="avatar5"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleContent('skill', this)">
+        SKILL <span class="plus">+</span>
+
+            <div id="skill" class="content-hidden">
+                <div class="skill">
+                    <p><strong>AI UTILIZATION</strong></p>
+                    <ul>
+                        <li>AI Tools: Enhance learning and workflow efficiency.</li>
+                        <li>Data Processing & Analysis: Utilize AI to speed up and optimize data tasks.</li>
+                    </ul>
+                    <p><strong>PROGRAMMING</strong></p>
+                    <ul>
+                        <li>Python:  Fundamental knowledge.</li>
+                        <li>C# WinForm: GUI development, PLC connection (GX Works and FX modules),<span class="spacing4"></span> barcode recognition.</li>
+                        <li>SQL: Basic database management and querying.</li>
+                        <li>GX Works: PLC programming and automation.</li>
+                    </ul>
+                    <p><strong>SOFT SKILLS</strong></p>
+                    <ul>
+                        <li>Team Collaboration: Coordinate work to accomplish common goals.</li>
+                        <li>Adaptability: Quickly learn and apply new concepts and technologies.</li>
+                        <li>Problem Solving: Apply 4M and 5Why methodologies to develop practical solutions.</li>
+                    </ul>
+                    <p><strong>PERSONAL ATTRIBUTES</strong></p>
+                    <ul>
+                        <li>Self-Motivated: Take initiative in learning and problem-solving.</li>
+                        <li>Communicative: Present ideas and explain problems clearly.</li>
+                        <li>Resilient: Maintain a positive, growth-oriented mindset while working.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" onclick="toggleContent('relevant', this)">
+            RELEVANT <span class="plus">+</span>
+            <div id="relevant" class="content-hidden">
+                <div>
+                    <p><i>Foreign Language</i></p>
+                    <p style="font-weight: normal;"><span style="color:orange">★</span><i>TOEIC Certificate 825</i><span style="color:orange">★</span></p>
+                    <img src="{{ url_for('static', filename='images/toeic-cer.png') }}" alt="toeic-certificate" class="toeic">
+                    <p><span style="color:orange">☆</span><i>Russian - Beginner (In Progress)</i><span style="color:orange">☆</span></p>
+                    <p>☆<i>French DELF B1(2021-2022)</i>☆</p>
+                    <p style="font-weight: normal;"><i>-- Office Proficiency - Basic Level --</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        🌟 THINK CREATIVELY. WORK COLLABORATIVELY. STAY DISCIPLINED. 🌟
+    </div>
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
