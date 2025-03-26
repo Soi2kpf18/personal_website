@@ -267,6 +267,7 @@ body {
 .skill p{
     margin-bottom: -10px;
     font-size: 20px;
+    color: black;
 }
 .skill li{
     margin-left: -15px;
