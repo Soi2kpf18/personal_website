@@ -12,7 +12,7 @@ def home():
 # Chạy ứng dụng Flask ở chế độ debug
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  # Lấy PORT từ biến môi trường
-    app.run(host="0.0.0.0", port=port)
+
 
 # Hướng dẫn cấu trúc thư mục:
 # - Thư mục chính (chứa file app.py)
