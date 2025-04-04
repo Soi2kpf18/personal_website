@@ -19,7 +19,8 @@ body::before {
     z-index: -1;
     opacity:0;
     filter: blur(8px);
-     animation: fadeInBackground 2s ease-in-out forwards;
+    animation: fadeInBackground 4s ease-in-out forwards;
+    transition: all 0.5s ease;
 }
 @keyframes fadeInBackground {
     from {
