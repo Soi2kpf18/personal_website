@@ -17,14 +17,18 @@ body::before {
     background-position: center;
     background-color: rgba(255, 255, 255, 0.3); /* Lớp phủ trắng nhẹ giúp làm nhạt */
     z-index: -1;
+    opacity:0;
+    filter: blur(8px);
      animation: fadeInBackground 2s ease-in-out forwards;
 }
 @keyframes fadeInBackground {
     from {
         opacity: 0;
+        filter: blur(8px);
     }
     to {
-        opacity: 1s ease-in; /* Hoặc bất kỳ mức độ trong suốt nào bạn muốn */
+        opacity: 0.5; /* Hoặc bất kỳ mức độ trong suốt nào bạn muốn */
+        filter: blur(0px);
     }
 }
 
